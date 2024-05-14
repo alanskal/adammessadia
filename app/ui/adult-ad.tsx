@@ -3,19 +3,27 @@
 // components/AdultAd.js
 
 import { useState, useEffect } from 'react';
+import Draggable, {DraggableCore} from "react-draggable";
 
-const AdultAd = (props) => {
+interface AdultAdProps {
+  content: string;
+  id: number;
+  timeOut: number;
+
+}
+
+const AdultAd: React.FC<AdultAdProps> = ({content, id, timeOut}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
 
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, props.timeOut);
+    }, timeOut);
 
     // Nettoyer le timer lorsque le composant est démonté
     return () => clearTimeout(timer);
-  }, []);
+  }, [timeOut]);
 
   const handleClose = () => {
     setIsVisible(false);
@@ -23,8 +31,10 @@ const AdultAd = (props) => {
 
   return (
     <>
+
       {isVisible && (
-        <div className={`mac-popup-${props.id}`}>
+      <Draggable>
+        <div className={`mac-popup-${id}`}>
           <div className="mac-popup-header">
             <div className="mac-popup-buttons">
               <div className="mac-popup-button close" onClick={handleClose}></div>
@@ -34,9 +44,13 @@ const AdultAd = (props) => {
             <div className="mac-popup-title">ADAM MESSADIA</div>
           </div>
           <div className="mac-popup-content">
-            <p>{props.content}</p>
+            <p>{content}</p>
+            <div>
+
+            </div>
           </div>
         </div>
+      </Draggable>
       )}
     </>
   );
