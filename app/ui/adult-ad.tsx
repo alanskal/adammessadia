@@ -41,7 +41,7 @@ const AdultAd: React.FC<AdultAdProps> = ({content, id, timeOut}) => {
               <div className="mac-popup-button minimize"></div>
               <div className="mac-popup-button zoom"></div>
             </div>
-            <div className="mac-popup-title">ADAM MESSADIA</div>
+            <div className="mac-popup-title">ADAM MESSAADIA</div>
           </div>
           <div className="mac-popup-content">
             <p>{content}</p>

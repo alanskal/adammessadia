@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "node -r dotenv/config ./scripts/seed.js"
   },
   "dependencies": {
+    "@prisma/client": "^5.15.0",
     "@stripe/react-stripe-js": "^2.7.1",
+    "@vercel/postgres": "^0.8.0",
     "amqplib": "^0.10.4",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
@@ -20,7 +23,7 @@
     "react-dom": "^18",
     "react-draggable": "^4.4.6",
     "stripe": "^15.10.0",
-    "tailwind": "^4.0.0"
+    "tailwind": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -29,6 +32,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
+    "prisma": "^5.15.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
