@@ -64,8 +64,7 @@ html, body {
 
 .mac-popup-1 {
   position: fixed;
-  top: 20%;
-  left: 20%;
+
   transform: translate(-50%, -50%);
   background-color: #f6f6f6;
 
@@ -75,11 +74,11 @@ html, body {
   max-width: 400px;
   width: 90%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
+
 }
 .mac-popup-2 {
   position: fixed;
-  top: 63%;
-  left: 60%;
+
   transform: translate(-50%, -50%);
   background-color: #f6f6f6;
   border: 1px solid #ccc;
@@ -89,12 +88,12 @@ html, body {
   max-width: 400px;
   width: 90%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
+
 }
 
 .mac-popup-3 {
   position: fixed;
-  top: 75%;
-  left: 20%;
+
   transform: translate(-50%, -50%);
   background-color: #f6f6f6;
   border: 1px solid #ccc;
@@ -104,6 +103,7 @@ html, body {
   max-width: 400px;
   width: 90%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
+
 }
 
 
@@ -161,4 +161,5 @@ html, body {
 .pLine {
   position: relative;
   top: 150px;
+  position: flo;
 }
