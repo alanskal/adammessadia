@@ -1,5 +1,5 @@
 .bg {
-  background-image: url(./assets/print-de-con.png);
+  background-image: url(/assets/print-de-con.png);
   width: auto;
   height: 100%;
   background-size: cover;
@@ -156,4 +156,9 @@ html, body {
 
 .mac-popup-content {
   line-height: 1.6;
+}
+
+.pLine {
+  position: relative;
+  top: 150px;
 }

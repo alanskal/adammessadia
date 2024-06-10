@@ -1,5 +1,6 @@
 
 import AdultAd from "./ui/adult-ad"
+import ProductRow from "./ui/products-row";
 
 
 
@@ -13,6 +14,10 @@ randTimeOut()
 
 // randomiser le content etc avec un object
   return (
+  <div>
+
+
+
     <div className="text-center">
       <h1 className="title blink">ADAM MESSADIA</h1>
       <AdultAd
@@ -32,6 +37,12 @@ randTimeOut()
       timeOut={randTimeOut()}
       />
     </div>
+        <div>
+          <ProductRow />
+        </div>
+      </div>
+
+
 
   );
 }
