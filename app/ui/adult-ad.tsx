@@ -1,17 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 // components/AdultAd.js
 
 import { useState, useEffect } from 'react';
 import Draggable from "react-draggable";
+import Image from 'next/image'
 
 interface AdultAdProps {
-  content: string;
   id: number;
   timeOut: number;
+  link: string;
+  height: number;
+  width: number;
 }
 
-const AdultAd: React.FC<AdultAdProps> = ({ content, id, timeOut }) => {
+const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -54,8 +58,14 @@ const AdultAd: React.FC<AdultAdProps> = ({ content, id, timeOut }) => {
               <div className="mac-popup-title">ADAM MESSAADIA</div>
             </div>
             <div className="mac-popup-content">
-              <p>{content}</p>
               <div></div>
+              <Image
+              alt='gif'
+              src={link}
+              height={height}
+              width={width}
+              />
+
             </div>
           </div>
         </Draggable>

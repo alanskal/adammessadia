@@ -85,7 +85,7 @@ html, body {
   border-radius: 8px;
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 480px;
   width: 90%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
 
@@ -100,7 +100,7 @@ html, body {
   border-radius: 8px;
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 480px;
   width: 90%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
 
@@ -114,11 +114,10 @@ html, body {
   display: flex;
 
   align-items: center;
-  margin-bottom: 15px;
   justify-content: space-between;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  padding: 0px 8px 0px 8px;
+  padding: 0px 0px 0px 0px;
 
 
 

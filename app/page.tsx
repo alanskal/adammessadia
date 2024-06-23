@@ -28,20 +28,28 @@ randTimeOut()
     <div className="text-center">
       <h1 className="title blink">ADAM MESSAADIA</h1>
       <AdultAd
-      content="Fais grossir ton swag en seulement 2 semaines"
       id={1}
       timeOut={randTimeOut()}
+      link='/assets/ye.gif'
+      height={200}
+      width={400}
 
       />
       <AdultAd
-      content="skal n'aime pas TypeScript"
       id={2}
       timeOut={randTimeOut()}
+      link='/assets/ye2.gif'
+      height={480}
+      width={480}
+
       />
       <AdultAd
-      content="test x: 700"
       id={3}
       timeOut={randTimeOut()}
+      link='/assets/ye3.gif'
+      height={480}
+      width={480}
+
       />
     </div>
         <div>
