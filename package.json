@@ -23,7 +23,8 @@
     "react-dom": "^18",
     "react-draggable": "^4.4.6",
     "stripe": "^15.10.0",
-    "tailwind": "^2.2.0"
+    "tailwind": "^2.2.0",
+    "vercel": "^34.2.7"
   },
   "devDependencies": {
     "@types/node": "^20",

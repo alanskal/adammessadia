@@ -117,7 +117,7 @@ html, body {
   justify-content: space-between;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 1rem 0px 1rem;
 
 
 
@@ -138,7 +138,10 @@ html, body {
 
 .close {
   background-color: #f44336; /* Rouge */
+
 }
+
+
 
 .minimize {
   background-color: #ffb74d; /* Jaune */
