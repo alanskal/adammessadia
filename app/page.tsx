@@ -4,6 +4,7 @@ import ProductRow from "./ui/products-row";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import PaymentForm from "./ui/paymentForm";
+import Image from 'next/image'
 
 
 
@@ -19,14 +20,23 @@ return Math.floor(Math.random() * 10000)
 
 randTimeOut()
 
-// randomiser le content etc avec un object
+
   return (
   <div>
 
 
 
     <div className="text-center">
-      <h1 className="title blink">ADAM MESSAADIA</h1>
+      <div className="title blink">
+        <Image
+        src="/assets/logo.png"
+        alt="logo"
+        height={150}
+        width={150}
+        />
+        </div>
+      </div>
+
       <AdultAd
       id={1}
       timeOut={randTimeOut()}
@@ -51,11 +61,19 @@ randTimeOut()
       width={480}
 
       />
-    </div>
-        <div>
-          <ProductRow />
 
-        </div>
+      <AdultAd
+      id={4}
+      timeOut={randTimeOut()}
+      link='/assets/ye4.gif'
+      height={200}
+      width={400}
+
+      />
+
+      <ProductRow />
+
+
       </div>
 
 

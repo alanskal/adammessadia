@@ -1,5 +1,5 @@
 .bg {
-  background-image: url(/assets/print-de-con.png);
+  background-image: url(/assets/fond.png);
   width: auto;
   height: 100%;
   background-size: cover;
@@ -7,11 +7,13 @@
 
 html, body {
   height: 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 100;
 }
 
 .navbar {
   background-color: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif;
+
   display:flex;
   justify-content: space-around;
 
@@ -101,6 +103,20 @@ html, body {
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 480px;
+  width: 90%;
+  z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
+
+}
+.mac-popup-4 {
+  position: fixed;
+
+  transform: translate(-50%, -50%);
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   width: 90%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
 
