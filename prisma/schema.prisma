@@ -2,6 +2,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
@@ -10,11 +11,13 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model Item {
-  id        String     @default(cuid()) @id
-  title     String
+type ID = Int @id
+
+model Cloth {
+  id        ID     @id @default(autoincrement())
+  name      String
   desc      String?
-  category  String
+  price     Float
   stock     Int
   createdAt DateTime   @default(now())
 

@@ -49,7 +49,7 @@ randTimeOut()
         id={2}
         timeOut={randTimeOut()}
         link='/assets/ye2.gif'
-        height={480}
+        height={200}
         width={480}
 
         />
