@@ -11,10 +11,10 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-type ID = Int @id
+
 
 model Cloth {
-  id        ID     @id @default(autoincrement())
+  id        Int     @id @default(autoincrement())
   name      String
   desc      String?
   price     Float
