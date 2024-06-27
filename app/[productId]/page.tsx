@@ -4,7 +4,7 @@ export default function ProductPage({params}: {
 ) {
   return (
     <div>
-      <h1>WIP WIP{params.productId}</h1>
+      <h1>WIP WIP{params.productId} blabla</h1>
     </div>
   )
 }
