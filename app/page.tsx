@@ -6,6 +6,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import PaymentForm from "./ui/paymentForm";
 import Image from 'next/image'
 
+require('dotenv').config();
 
 
 export default function Home() {
@@ -19,6 +20,8 @@ return Math.floor(Math.random() * 10000)
 }
 
 randTimeOut()
+
+
 
 
   return (
