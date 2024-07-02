@@ -1,9 +1,9 @@
 
-import AdultAd from "./ui/adult-ad"
-import ProductRow from "./ui/products-row";
+import AdultAd from "../ui/adult-ad"
+import ProductRow from "../ui/products-row";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import PaymentForm from "./ui/paymentForm";
+import PaymentForm from "../ui/paymentForm";
 import Image from 'next/image'
 
 require('dotenv').config();
@@ -25,18 +25,18 @@ randTimeOut()
 
 
   return (
-  <div>
+  <div className="main">
 
 
 
     <div className="text-center">
       <div className="title blink">
-        <Image
+        {/* <Image
         src="/assets/sitelogo.png"
         alt="logo"
         height={150}
         width={150}
-        />
+        /> */}
         </div>
       </div>
 
