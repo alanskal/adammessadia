@@ -1,39 +1,44 @@
-import prisma from '../app/db';
+import prisma from '../db';
+import ProductPage from '../ui/productPage';
 
-export async function getServerSideProps({ params }) {
-  const { productId } = params;
+  export async function getServerSideProps({ params }: { params: { productId: string } }) {
+    const { productId } = params;
 
-  const product = await prisma.cloth.findFirst({
-    where: {
-      id: Number(productId),
-    },
-  });
+    const product = await prisma.cloth.findFirst({
+      where: {
+        id: Number(productId),
+      },
+    });
 
-  if (!product) {
+    if (!product) {
+      return {
+        notFound: true,
+      };
+    }
+
+  // sérialisation pour éviter de passer des données sensibles
+    const serializedProduct = {
+      id: product.id,
+      name: product.name,
+      desc: product.desc,
+      price: product.price,
+
+    };
+
+    // retourne les props
     return {
-      notFound: true,
+      props: {
+        product: serializedProduct,
+      },
     };
   }
 
-  const serializedProduct = {
-    id: product.id,
-    name: product.name,
-    desc: product.desc,
+  // définis le type de props
+  // Appelle le composant Show avec les props
+const Show = ({ product }: { product: { id: number; name: string; desc: string; price: number; } }) => (
+  <div>
+    <ProductPage product={product} />
+  </div>
+);
 
-  };
-
-  return {
-    props: {
-      product: serializedProduct,
-    },
-  };
-}
-
-export default function ProductPage({ product }) {
-  return (
-    <div>
-      <h1>{product?.name}</h1>
-      {/* Autres détails du produit */}
-    </div>
-  );
-}
+export default Show;
