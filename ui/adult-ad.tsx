@@ -59,7 +59,7 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
             </div>
             <div className="mac-popup-content">
               <div></div>
-              <Image
+              <Image unoptimized
               alt='gif'
               src={link}
               height={height}

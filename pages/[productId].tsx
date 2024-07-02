@@ -25,7 +25,7 @@ import ProductPage from '../ui/productPage';
 
     };
 
-    // retourne les props
+    // retourne le produit sérialisé en tant que props
     return {
       props: {
         product: serializedProduct,
@@ -33,8 +33,8 @@ import ProductPage from '../ui/productPage';
     };
   }
 
-  // définis le type de props
-  // Appelle le composant Show avec les props
+  // définis le type de props, ici un objet avec une clé product qui est un objet avec les clés id, name, desc et price
+  // Passe le produit sérialisé à ProductPage
 const Show = ({ product }: { product: { id: number; name: string; desc: string; price: number; } }) => (
   <div>
     <ProductPage product={product} />
