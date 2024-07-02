@@ -3,28 +3,28 @@ import Link from 'next/link'
 
 export default function NavbarAlt() {
   return (
-    <div className='navbar-alt d-flex justify-content-between'>
+    <div className='navbar-alt d-flex justify-content-between pt-1 align-items-center'>
       <Image className=''
-        src="/assets/sorciere.png"
-        alt="logo"
-        height={150}
-        width={350}
+        src="/assets/bar.png"
+        alt="menu déroulant"
+        height={90}
+        width={90}
       />
       <Link href='/'>
-      <Image className='home-btn'
-        src="/assets/sorciere.png"
+      <Image className='lgo'
+        src="/assets/sitelogo.png"
         alt="logo"
-        height={150}
+        height={180}
         width={350}
     />
 
       </Link>
       <Link href='/about'>
         <Image
-          src="/assets/sorciere.png"
-          alt="logo"
-          height={150}
-          width={350}
+          src="/assets/cart.png"
+          alt="panier"
+          height={90}
+          width={90}
         />
       </Link>
     </div>

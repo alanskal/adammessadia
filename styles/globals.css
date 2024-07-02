@@ -3,7 +3,7 @@
 body, html {
   height: 100vh;
   width: 100vw;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Minecraft', sans-serif;
   font-weight: 100;
   background-image: url('/assets/fond.png');
   background-size: cover;
@@ -34,12 +34,15 @@ body, html {
 
 }
 
-.productName {
+.productInfos {
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FFBC00;
+  color: #44F803;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
@@ -175,6 +178,20 @@ body, html {
 
 }
 
+.mac-popup-5 {
+
+  position: fixed;
+
+  transform: translate(-50%, -50%);
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  z-index: 9999; /* Assure que la pop-up est au-dessus de tout le rste */
+}
 
 
 

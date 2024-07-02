@@ -38,8 +38,8 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
   };
 
   const RandomPosition = () => {
-    const randomTop = Math.random() * 500 + 'px';
-    const randomLeft = Math.random() * 600 + 'px';
+    const randomTop = Math.random() * 80 + 'vh';
+    const randomLeft = Math.random() * 80 + 'vh';
     const randomPosition = { top: randomTop, left: randomLeft };
     return randomPosition;
   };
