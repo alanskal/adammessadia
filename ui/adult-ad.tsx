@@ -18,12 +18,13 @@ interface AdultAdProps {
 const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) => {
   const [isVisible, setIsVisible] = useState(false);
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, timeOut);
 
-    // Nettoyer le timer lorsque le composant est démonté
+
     return () => clearTimeout(timer);
   }, [timeOut]);
 
@@ -37,6 +38,13 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
     setIsVisible(false);
   };
 
+  const handleGlobalClose = () => {
+    const allPopups = document.querySelectorAll('.closeAll');
+    allPopups.forEach((popup) => {
+      popup.classList.add('d-none')
+    });
+  };
+
   const RandomPosition = () => {
     const randomTop = Math.random() * 80 + 'vh';
     const randomLeft = Math.random() * 80 + 'vh';
@@ -48,12 +56,12 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
     <>
       {isVisible && (
         <Draggable>
-          <div className={`mac-popup-${id}`} style={RandomPosition()}>
+          <div className={`mac-popup-${id} closeAll`} style={RandomPosition()}>
             <div className="mac-popup-header">
               <div className="mac-popup-buttons">
                 <div className="mac-popup-button close" onClick={handleClose}></div>
-                <div className="mac-popup-button minimize"></div>
-                <div className="mac-popup-button zoom"></div>
+                <div className="mac-popup-button minimize" onClick={handleGlobalClose}></div>
+                {/* <div className="mac-popup-button zoom"></div> */}
               </div>
               <div className="mac-popup-title">ADAM MESSAADIA</div>
             </div>
@@ -65,9 +73,9 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
               height={height}
               width={width}
               />
-
             </div>
           </div>
+
         </Draggable>
       )}
     </>
