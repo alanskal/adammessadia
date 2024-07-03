@@ -6,13 +6,22 @@ import '../styles/fonts.css';
 import Navbar from "../ui/navbar";
 import type { AppProps } from 'next/app';
 import NavbarAlt from '@/ui/NavbarAlt';
+import Head from 'next/head';
+import logo from '../public/assets/headlogo.png';
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  <div className='bg'>
-    <NavbarAlt />
-      <Component {...pageProps} />;
-  </div>
+  <>
+    <Head>
+      <title>Adam Messaadia</title>
+    </Head>
+      <div className='bg'>
+        <NavbarAlt />
+          <Component {...pageProps} />;
+      </div>
+  </>
 
   )
 }

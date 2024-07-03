@@ -5,8 +5,11 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import PaymentForm from "../ui/paymentForm";
 import Image from 'next/image'
+import { Metadata } from 'next'
+
 
 require('dotenv').config();
+
 
 
 export default function Home() {
