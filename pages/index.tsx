@@ -5,7 +5,8 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import PaymentForm from "../ui/paymentForm";
 import Image from 'next/image'
-import { Metadata } from 'next'
+import Link from 'next/link'
+
 
 
 require('dotenv').config();
@@ -29,19 +30,6 @@ randTimeOut()
 
   return (
   <div className="main">
-
-
-
-    <div className="text-center">
-      <div className="title blink">
-        {/* <Image
-        src="/assets/sitelogo.png"
-        alt="logo"
-        height={150}
-        width={150}
-        /> */}
-        </div>
-      </div>
 
         <AdultAd
         id={1}
@@ -84,8 +72,15 @@ randTimeOut()
         width={400}
 
         />
-
-          <ProductRow />
+        <Link href={'/shop'} >
+          <Image
+          className="enter"
+          alt='enter'
+          src='/assets/shop.png'
+          height={200}
+          width={400}
+          />
+        </Link>
 
 
 
