@@ -21,6 +21,8 @@ const ProductPage = ({ product }: {product: { id: number; name: string; desc: st
           </div>
 
       </div>
+
+      // blablibla
   )
 
   export default ProductPage;
