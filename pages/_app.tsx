@@ -8,6 +8,7 @@ import type { AppProps } from 'next/app';
 import NavbarAlt from '@/ui/NavbarAlt';
 import Head from 'next/head';
 import logo from '../public/assets/headlogo.png';
+import CartProvider from "../ui/CartProvider";
 
 
 
@@ -17,10 +18,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Head>
       <title>Adam Messaadia</title>
     </Head>
+    <CartProvider>
       <div className='bg'>
         <NavbarAlt />
           <Component {...pageProps} />;
       </div>
+    </CartProvider>
   </>
 
   )
