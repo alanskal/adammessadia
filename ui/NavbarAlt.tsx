@@ -1,15 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Dropdown from 'react-bootstrap/Dropdown'
+import { useShoppingCart } from "use-shopping-cart";
+import { useMediaQuery } from '@mui/material'
+
+
 
 export default function NavbarAlt() {
+
+  const { handleCartClick } = useShoppingCart();
+
+
+  const isMobile = useMediaQuery('(max-width:600px)')
 
 
 
   return (
 
 
-    <div className='navbar-alt d-flex justify-content-between pt-1 align-items-center'>
+
+  <div className="row">
+    <div className='navbar-alt d-flex justify-content-between pt-1 pb-2 align-items-center col-sm-12 '>
       <Dropdown className='' >
         <Dropdown.Toggle variant="" id="dropdown-basic" className='dropDown shake'>
            <Image
@@ -31,19 +42,27 @@ export default function NavbarAlt() {
       <Image id='logo' className=''
         src="/assets/sitelogo.png"
         alt="logo"
-        height={180}
-        width={350}
-    />
+        height={isMobile ? 80 : 180}
+        width={isMobile ? 180 : 350}
+
+
+        />
 
       </Link>
-      <Link href='/about'>
+      <button onClick={handleCartClick}>
+
         <Image className='shake'
           src="/assets/cart.png"
           alt="panier"
           height={90}
           width={90}
-        />
-      </Link>
-    </div>
+
+          />
+      </button>
+
+          </div>
+        </div>
+
+
   )
 }

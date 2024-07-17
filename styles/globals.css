@@ -188,7 +188,7 @@ body, html {
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 480px;
-  width: 90%;
+  width: 100%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le reste */
 
 }
@@ -203,7 +203,7 @@ body, html {
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 480px;
-  width: 90%;
+  width: 100%;
   z-index: 9999;
 
 }
@@ -217,7 +217,7 @@ body, html {
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  width: 90%;
+  width: 100%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le rste */
 
 }
@@ -243,7 +243,7 @@ button {
 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  width: 90%;
+  width: 100%;
   z-index: 9999; /* Assure que la pop-up est au-dessus de tout le rste */
 }
 
@@ -316,12 +316,11 @@ button {
 }
 
 
-/* Test de navbar  */
 
 .navbar-alt {
   padding-inline: 12px;
   align-items: center;
-  position: sticky;
+  /* position: sticky; */
 }
 
 .flip-card {
@@ -356,4 +355,54 @@ button {
 
   color: white;
   transform: rotateY(180deg);
+}
+
+@media (max-width: 1600px) {
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 16px;
+  }
+
+  .image-grid {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1200px) {
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 16px;
+  }
+
+  .image-grid {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 996px) {
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 8px;
+  }
+
+  .image-grid {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 572px) {
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr ;
+    row-gap: 8px;
+  }
+
+  .image-grid {
+    margin: 0 auto;
+  }
 }

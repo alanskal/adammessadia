@@ -11,10 +11,10 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
       successUrl="http://localhost:3000"
       cancelUrl="http://localhost:3000/nowosci"
-      currency="PLN"
+      currency="EUR"
       billingAddressCollection={true}
       shouldPersist={true}
-      language="pl-PL"
+      language="fr-FR"
     >
       {children}
     </USCProvider>
