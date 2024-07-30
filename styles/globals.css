@@ -206,6 +206,7 @@ body, html {
   width: 90%;
   z-index: 9999;
 
+
 }
 .mac-popup-4 {
   position: fixed;
@@ -373,4 +374,10 @@ button {
     width: 3rem;
     height: auto;
   }
+
+  .ad-mobile {
+    width: 349px;
+  }
+
+
 }

@@ -52,8 +52,8 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
 
 
   const RandomPosition = () => {
-    const randomTop = Math.random() * 90 + 'vh';
-    const randomLeft = mobileDisplay ? 0 + 'vh' :  Math.random() * 90 + 'vh' ;
+    const randomTop = mobileDisplay ? Math.random() * 40 + 'vh' : Math.random() * 90 + 'vh';
+    const randomLeft = mobileDisplay ? '3vh' :  Math.random() * 90 + 'vh' ;
     const randomPosition = { top: randomTop, left: randomLeft };
     return randomPosition;
   };
@@ -66,7 +66,7 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
       {isVisible && (
         <Draggable>
           <div className={`mac-popup-${id} closeAll`} style={RandomPosition()}>
-            <div className={mobileDisplay ? "d.none" :"mac-popup-header"}>
+            <div className="mac-popup-header">
               <div className={mobileDisplay ? "d.none" : "mac-popup-buttons"}>
                 <div className={mobileDisplay ? "d.none" : "mac-popup-button close"} onClick={handleClose}></div>
                 <div className={mobileDisplay ? 'd.none' : "mac-popup-button minimize"} onClick={handleGlobalClose}></div>
@@ -75,12 +75,13 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
               <div className="mac-popup-title">ADAM MESSAADIA</div>
             </div>
             <div className="mac-popup-content" onClick={mobileDisplay ? handleClose : undefined} >
-              <div></div>
               <Image unoptimized
               alt='gif'
               src={link}
               height={height}
               width={width}
+              className='ad-mobile'
+              id='ad-mobile'
               />
             </div>
           </div>
