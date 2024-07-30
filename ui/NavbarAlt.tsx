@@ -17,6 +17,7 @@ export default function NavbarAlt() {
             alt="menu déroulant"
             height={90}
             width={90}
+            id='dropdown'
             />
         </Dropdown.Toggle>
 
@@ -38,6 +39,7 @@ export default function NavbarAlt() {
       </Link>
       <Link href='/about'>
         <Image className='shake'
+          id="cart"
           src="/assets/cart.png"
           alt="panier"
           height={90}

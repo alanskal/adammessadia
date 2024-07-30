@@ -6,8 +6,8 @@ export default function ShopPage () {
    <>
 
    {/* test row */}
-    <div className="row px-4">
-      <div className="col-3 ">
+    <div className="row px-4 mx-auto container-fluid">
+      <div className="col-lg-3 col-sm-auto">
 
       <Image
       src={'/assets/kanyehoodie.png'}
@@ -17,76 +17,33 @@ export default function ShopPage () {
 
       />
       </div>
-      <div className="col-3 ">
+      <div className="col-lg-3 col-sm-auto ">
 
       <Image
       src={'/assets/kanyehoodie.png'}
       width={300}
       height={300}
       alt="tee"
-
       />
       </div>
-      <div className="col-3 ">
+      <div className="col-lg-3 col-sm-auto ">
 
       <Image
       src={'/assets/kanyehoodie.png'}
       width={300}
       height={300}
       alt="tee"
-
       />
       </div>
-    <div className="col-3 ">
+      <div className="col-lg-3 col-sm-auto ">
 
-    <Image
-    src={'/assets/kanyehoodie.png'}
-    width={300}
-    height={300}
-    alt="tee"
-
-    />
-    </div>
-    <div className="col-3 ">
-
-    <Image
-    src={'/assets/kanyehoodie.png'}
-    width={300}
-    height={300}
-    alt="tee"
-
-    />
-    </div>
-    <div className="col-3 ">
-
-    <Image
-    src={'/assets/kanyehoodie.png'}
-    width={300}
-    height={300}
-    alt="tee"
-
-    />
-    </div>
-    <div className="col-3 ">
-
-    <Image
-    src={'/assets/kanyehoodie.png'}
-    width={300}
-    height={300}
-    alt="tee"
-
-    />
-    </div>
-    <div className="col-3 ">
-
-    <Image
-    src={'/assets/kanyehoodie.png'}
-    width={300}
-    height={300}
-    alt="tee"
-
-    />
-    </div>
+      <Image
+      src={'/assets/kanyehoodie.png'}
+      width={300}
+      height={300}
+      alt="tee"
+      />
+      </div>
 
     </div>
    </>

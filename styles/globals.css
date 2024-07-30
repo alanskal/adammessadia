@@ -357,3 +357,20 @@ button {
   color: white;
   transform: rotateY(180deg);
 }
+
+
+@media(max-width: 576px) {
+  #logo {
+    width: auto;
+    height: auto  ;
+  }
+  #dropdown{
+    width: 3rem;
+    height: auto;
+  }
+
+  #cart {
+    width: 3rem;
+    height: auto;
+  }
+}
