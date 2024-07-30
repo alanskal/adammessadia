@@ -31,6 +31,7 @@
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18",
     "react-draggable": "^4.4.6",
+    "react-responsive": "^10.0.0",
     "semver": "^7.6.3",
     "tailwind": "^2.2.0",
     "tar": "^7.4.3",
