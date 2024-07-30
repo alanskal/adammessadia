@@ -6,6 +6,8 @@
 import { useState, useEffect } from 'react';
 import Draggable from "react-draggable";
 import Image from 'next/image'
+import { useMediaQuery } from 'react-responsive'
+
 
 interface AdultAdProps {
   id: number;
@@ -45,27 +47,34 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
     });
   };
 
+  const mobileDisplay = useMediaQuery({ query: '(max-width: 768px)' })
+
+
+
   const RandomPosition = () => {
-    const randomTop = Math.random() * 80 + 'vh';
-    const randomLeft = Math.random() * 80 + 'vh';
+    const randomTop = Math.random() * 90 + 'vh';
+    const randomLeft = mobileDisplay ? 0 + 'vh' :  Math.random() * 90 + 'vh' ;
     const randomPosition = { top: randomTop, left: randomLeft };
     return randomPosition;
   };
+
+
+
 
   return (
     <>
       {isVisible && (
         <Draggable>
           <div className={`mac-popup-${id} closeAll`} style={RandomPosition()}>
-            <div className="mac-popup-header">
-              <div className="mac-popup-buttons">
-                <div className="mac-popup-button close" onClick={handleClose}></div>
-                <div className="mac-popup-button minimize" onClick={handleGlobalClose}></div>
+            <div className={mobileDisplay ? "d.none" :"mac-popup-header"}>
+              <div className={mobileDisplay ? "d.none" : "mac-popup-buttons"}>
+                <div className={mobileDisplay ? "d.none" : "mac-popup-button close"} onClick={handleClose}></div>
+                <div className={mobileDisplay ? 'd.none' : "mac-popup-button minimize"} onClick={handleGlobalClose}></div>
                 {/* <div className="mac-popup-button zoom"></div> */}
               </div>
               <div className="mac-popup-title">ADAM MESSAADIA</div>
             </div>
-            <div className="mac-popup-content">
+            <div className="mac-popup-content" onClick={mobileDisplay ? handleClose : undefined} >
               <div></div>
               <Image unoptimized
               alt='gif'
