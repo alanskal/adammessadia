@@ -22,6 +22,7 @@ import ProductPage from '../ui/productPage';
       name: product.name,
       desc: product.desc,
       price: product.price,
+      image: product.imageUrl
 
     };
 
@@ -35,7 +36,7 @@ import ProductPage from '../ui/productPage';
 
   // définis le type de props, ici un objet avec une clé product qui est un objet avec les clés id, name, desc et price
   // Passe le produit sérialisé à ProductPage
-const Show = ({ product }: { product: { id: number; name: string; desc: string; price: number; } }) => (
+const Show = ({ product }: { product: { id: number; name: string; desc: string; price: number, image: string; } }) => (
   <div>
     <ProductPage product={product} />
   </div>

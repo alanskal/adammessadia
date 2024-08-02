@@ -4,14 +4,18 @@ import Image from 'next/image'
 // déstructure les props
 // appelle le composant Image avec les props
 // déstructure product puis indique que le composant attend un objet avec les clés id, name et desc
-const ProductPage = ({ product }: {product: { id: number; name: string; desc: string; price: number;}}) => (
+const ProductPage = ({ product }: {product: { id: number; name: string; desc: string; price: number, image: string;}}) => (
       <div className='productPage'>
+        <div>
+
           <Image className='productImage'
-            src='/assets/kanyehoodie.png'
+            src={product.image}
             width={300}
             height={300}
+            layout='contain'
             alt="kanye'"
-          />
+            />
+          </div>
 
 
           <div className='productInfos'>

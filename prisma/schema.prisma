@@ -17,5 +17,5 @@ model Cloth {
   stock     Int
   createdAt DateTime @default(now())
   id        Int      @id @default(autoincrement())
-  imageUrl  String?
+  imageUrl String?
 }

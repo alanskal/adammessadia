@@ -81,10 +81,6 @@ randTimeOut()
           width={400}
           />
         </Link>
-
-
-
-
       </div>
 
 
