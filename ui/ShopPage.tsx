@@ -1,55 +1,37 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 
-export default function ShopPage () {
+const ShopPage = ({ products }: { products: { id: number; name: string; desc: string; price: number, image: string; }[] }) => {
 
 
 
   return (
    <>
 
-   {/* test row */}
     <div className="row px-4 mx-auto container-fluid">
-      <div className="col-lg-3 col-sm-auto">
+      <div className="col-lg-3 col-sm-12">
+        {products.map (product => (
+          <div className="image-wrapper"key={product.id}>
 
-      <Image
-      src={'/assets/kanyehoodie.png'}
-      width={300}
-      height={300}
-      alt="tee"
+          <Link href={`/${product.id}`} >
+           <Image
+           src={product.image}
+           width={300}
+           height={300}
+           layout='fixed'
+           alt={product.name}
+           className="card-img-top"
+           />
+           </Link>
 
-      />
+           </div>
+        ))}
       </div>
-      <div className="col-lg-3 col-sm-auto ">
-
-      <Image
-      src={'/assets/kanyehoodie.png'}
-      width={300}
-      height={300}
-      alt="tee"
-      />
-      </div>
-      <div className="col-lg-3 col-sm-auto ">
-
-      <Image
-      src={'/assets/kanyehoodie.png'}
-      width={300}
-      height={300}
-      alt="tee"
-      />
-      </div>
-      <div className="col-lg-3 col-sm-auto ">
-
-      <Image
-      src={'/assets/kanyehoodie.png'}
-      width={300}
-      height={300}
-      alt="tee"
-      />
-      </div>
-
-    </div>
-   </>
+     </div>
+</>
   )
 }
+
+export default ShopPage

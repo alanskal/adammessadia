@@ -12,13 +12,13 @@ const ProductPage = ({ product }: {product: { id: number; name: string; desc: st
             src={product.image}
             width={300}
             height={300}
-            layout='contain'
-            alt="kanye'"
+
+            alt={product.name}
             />
           </div>
 
 
-          <div className='productInfos'>
+          <div className='productInfos container-fluid'>
             <h1>{product.name}</h1>
             <h1>{product.price}</h1>
             <h1>Ajouter au panier</h1>
