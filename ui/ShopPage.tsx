@@ -13,7 +13,7 @@ const ShopPage = ({ products }: { products: { id: number; name: string; desc: st
     <div className="row px-4 mx-auto container-fluid">
       <div className="col-lg-3 col-sm-12">
         {products.map (product => (
-          <div className="image-wrapper"key={product.id}>
+          <div className="image-wrapper" key={product.id}>
 
           <Link href={`/${product.id}`} >
            <Image
