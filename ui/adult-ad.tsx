@@ -40,6 +40,10 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
     setIsVisible(false);
   };
 
+  const onTouchClose = () => {
+    handleClose()
+  }
+
   const handleGlobalClose = () => {
     const allPopups = document.querySelectorAll('.closeAll');
     allPopups.forEach((popup) => {
