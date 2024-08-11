@@ -395,3 +395,19 @@ button {
   height: 100%;
 
 }
+
+.dropdown {
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  padding: 0px 0px 0px 0px;
+}
+
+#taille {
+  background-color: #4caf50;
+  width: 150px;
+}
+
+#taille:hover {
+  background-color: #67005B;
+}

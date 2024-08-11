@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 // déstructure les props
@@ -19,9 +21,16 @@ const ProductPage = ({ product }: {product: { id: number; name: string; desc: st
 
 
           <div className='productInfos container-fluid'>
-            <h1>{product.name}</h1>
-            <h1>{product.price}</h1>
-            <h1>Ajouter au panier</h1>
+            <h2>{product.name}</h2>
+            <h2>{product.price}</h2>
+            <div className='mb-2 d-flex justify-center taille'>
+              <DropdownButton id="taille" title="Taille" >
+                <Dropdown.Item href="action-1">Ouais</Dropdown.Item>
+                <Dropdown.Item href="action-1">Ouais</Dropdown.Item>
+                <Dropdown.Item href="action-1">Ouais</Dropdown.Item>
+              </DropdownButton>
+            </div>
+            <h2>Ajouter au panier</h2>
           </div>
 
       </div>

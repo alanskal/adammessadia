@@ -78,7 +78,7 @@ const AdultAd: React.FC<AdultAdProps> = ({id, link, timeOut, height, width }) =>
               </div>
               <div className="mac-popup-title">ADAM MESSAADIA</div>
             </div>
-            <div className="mac-popup-content" onClick={mobileDisplay ? handleClose : undefined} >
+            <div className="mac-popup-content" onClick={handleClose} onTouchEnd={onTouchClose} >
               <Image unoptimized
               alt='gif'
               src={link}
