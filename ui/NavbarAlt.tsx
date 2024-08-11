@@ -37,7 +37,7 @@ export default function NavbarAlt() {
     />
 
       </Link>
-      <Link href='/about'>
+      <Link href='/panier'>
         <Image className='shake'
           id="cart"
           src="/assets/cart.png"

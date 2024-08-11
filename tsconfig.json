@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "global.d.ts", "app/pages/product/[slug].js", "app/products/[id].js", "app/pages/product/[id].js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "global.d.ts", "app/pages/product/[slug].js", "app/products/[id].js", "app/pages/product/[id].js", "ui/cart.jsx", "ui/checkout.jsx", "pages/api/checkout-sessions/create.js", "pages/checkout.js"],
   "exclude": ["node_modules"],
 }
