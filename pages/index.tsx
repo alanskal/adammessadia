@@ -3,7 +3,6 @@ import AdultAd from "../ui/adult-ad"
 import ProductRow from "../ui/products-row";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import PaymentForm from "../ui/paymentForm";
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react';
