@@ -411,3 +411,16 @@ button {
 #taille:hover {
   background-color: #67005B;
 }
+
+#addToCart {
+  color: #44F803;
+  font-size: 32px;
+}
+
+.cart {
+  width: 220px;
+}
+
+#goToPay {
+  font-size: 20px;
+}
