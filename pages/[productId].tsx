@@ -4,6 +4,7 @@ import ProductPage from '../ui/productPage';
   export async function getServerSideProps({ params }: { params: { productId: string } }) {
     const { productId } = params;
 
+
     const product = await prisma.cloth.findFirst({
       where: {
         id: Number(productId),
@@ -22,7 +23,8 @@ import ProductPage from '../ui/productPage';
       name: product.name,
       desc: product.desc,
       price: product.price,
-      image: product.imageUrl
+      image: product.imageUrl,
+      priceId: product.priceId
 
     };
 
@@ -36,7 +38,7 @@ import ProductPage from '../ui/productPage';
 
   // définis le type de props, ici un objet avec une clé product qui est un objet avec les clés id, name, desc et price
   // Passe le produit sérialisé à ProductPage
-const Show = ({ product }: { product: { id: number; name: string; desc: string; price: number, image: string; } }) => (
+const Show = ({ product }: { product: { id: number; name: string; desc: string; price: number, image: string, priceId: string; } }) => (
   <div>
     <ProductPage product={product} />
   </div>

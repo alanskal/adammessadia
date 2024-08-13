@@ -3,22 +3,31 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      // Create Checkout Sessions from body params.
-      const session = await stripe.checkout.sessions.create({
-        line_items: [
-          {
+      const { cart } = req.body;
 
-            price: "",
-            quantity: 1,
-          },
-        ],
+      // Vérifie que le panier contient des articles
+      if (!cart || cart.length === 0) {
+        return res.status(400).json({ error: 'Votre panier est vide' });
+      }
+
+      // Création des lignes d'articles pour Stripe à partir du panier
+      const line_items = cart.map(item => ({
+        price: item.priceId,
+        quantity: item.quantity,
+      }));
+
+      // Créer une session de paiement Stripe
+      const session = await stripe.checkout.sessions.create({
+        line_items,
         mode: 'payment',
         success_url: `${req.headers.origin}/?success=true`,
         cancel_url: `${req.headers.origin}/?canceled=true`,
       });
-      res.redirect(303, session.url);
+
+      res.json({ url: session.url });
     } catch (err) {
-      res.status(err.statusCode || 500).json(err.message);
+      console.error('Error in Stripe checkout session:', err.message);
+      res.status(err.statusCode || 500).json({ error: err.message });
     }
   } else {
     res.setHeader('Allow', 'POST');
