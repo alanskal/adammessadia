@@ -1,6 +1,6 @@
 // lib/prisma.js
 
-import prisma from './prisma'; // Assure-toi du bon chemin
+import prisma from './prisma';
 
 export const getProductsByPriceIds = async (priceId) => {
   return await prisma.cloth.findMany({

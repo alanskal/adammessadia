@@ -4,10 +4,17 @@ import ProductPage from '../ui/productPage';
   export async function getServerSideProps({ params }: { params: { productId: string } }) {
     const { productId } = params;
 
+    const id = Number(productId);
+  if (isNaN(id)) {
+    return {
+      notFound: true,
+    };
+  }
+
 
     const product = await prisma.cloth.findFirst({
       where: {
-        id: Number(productId),
+        id: id
       },
     });
 
