@@ -10,7 +10,7 @@ export default function ProductRow(){
       <div className="col-3 d-flex justify-content-center pPosition">
         <Link href="/1">
           <Image
-            src="/assets/kanyehoodie.png"
+            src="/images/kanyehoodie.png"
               width={300}
               height={300}
 

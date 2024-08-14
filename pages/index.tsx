@@ -35,7 +35,7 @@ randTimeOut()
         <AdultAd
         id={1}
         timeOut={randTimeOut()}
-        link='/assets/ye.gif'
+        link='/images/ye.gif'
         height={200}
         width={400}
 
@@ -43,7 +43,7 @@ randTimeOut()
         <AdultAd
         id={2}
         timeOut={randTimeOut()}
-        link='/assets/ye2.gif'
+        link='/images/ye2.gif'
         height={200}
         width={480}
 
@@ -51,7 +51,7 @@ randTimeOut()
         <AdultAd
         id={3}
         timeOut={randTimeOut()}
-        link='/assets/ye3.gif'
+        link='/images/ye3.gif'
         height={480}
         width={480}
 
@@ -60,7 +60,7 @@ randTimeOut()
         <AdultAd
         id={4}
         timeOut={randTimeOut()}
-        link='/assets/ye4.gif'
+        link='/images/ye4.gif'
         height={200}
         width={400}
 
@@ -68,7 +68,7 @@ randTimeOut()
         <AdultAd
         id={4}
         timeOut={randTimeOut()}
-        link='/assets/ye5.gif'
+        link='/images/ye5.gif'
         height={200}
         width={400}
 
@@ -77,7 +77,7 @@ randTimeOut()
           <Image
           className="enter"
           alt='enter'
-          src='/assets/shop.png'
+          src='/images/shop.png'
           height={200}
           width={400}
           />

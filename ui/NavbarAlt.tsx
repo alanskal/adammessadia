@@ -77,7 +77,7 @@ export default function NavbarAlt() {
       <Dropdown>
         <Dropdown.Toggle variant="" id="dropdown-basic" className='dropDown shake'>
           <Image
-            src="/assets/bar.png"
+            src="/images/bar.png"
             alt="menu déroulant"
             height={90}
             width={90}
@@ -93,7 +93,7 @@ export default function NavbarAlt() {
 
       <Link href='/'>
         <Image id='logo' className=''
-          src="/assets/sitelogo.png"
+          src="/images/sitelogo.png"
           alt="logo"
           height={180}
           width={350}
@@ -103,7 +103,7 @@ export default function NavbarAlt() {
       <Flyout>
         <Image className='shake'
           id="cart"
-          src="/assets/cart.png"
+          src="/images/cart.png"
           alt="panier"
           height={90}
           width={90}
