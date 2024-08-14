@@ -3,9 +3,20 @@ import Link from 'next/link';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useState, useEffect, useRef } from 'react';
 import { useCart } from '../context/CartContext';  // Assurez-vous que le chemin est correct
+import { useMediaQuery } from 'react-responsive';
+import { useRouter } from 'next/router';
+
+function useMobileDisplay() {
+  return useMediaQuery({ query: '(max-width: 768px)' });
+}
+
+
 
 export default function NavbarAlt() {
+
+  const isMobile = useMobileDisplay();
   const { cart } = useCart();
+  const router = useRouter();
 
   const proceedToCheckout = async () => {
     try {
@@ -48,8 +59,16 @@ export default function NavbarAlt() {
       };
     }, []);
 
+    const handleClick = () => {
+      if (isMobile) {
+        router.push('/cart');  // Redirige vers la page /cart sur mobile
+      } else {
+        toggleFlyout();
+      }
+    };
+
     return (
-      <div className='position-relative' onClick={toggleFlyout}>
+      <div className='position-relative' onClick={handleClick}>
         {children}
         {open && (
           <div className='bg-white position-absolute top-0 end-100 rounded'>
@@ -99,16 +118,15 @@ export default function NavbarAlt() {
           width={350}
         />
       </Link>
-
-      <Flyout>
-        <Image className='shake'
-          id="cart"
-          src="/assets/cart.png"
-          alt="panier"
-          height={90}
-          width={90}
-        />
-      </Flyout>
+        <Flyout>
+            <Image className='shake'
+              id="cart"
+              src="/assets/cart.png"
+              alt="panier"
+              height={90}
+              width={90}
+              />
+        </Flyout>
     </div>
   );
 }
