@@ -7,7 +7,7 @@ import Navbar from "../ui/navbar";
 import type { AppProps } from 'next/app';
 import NavbarAlt from '@/ui/NavbarAlt';
 import Head from 'next/head';
-import logo from '../public/images/headlogo.png';
+import logo from '../public/assets/headlogo.png';
 import { CartProvider } from '../context/CartContext';
 
 

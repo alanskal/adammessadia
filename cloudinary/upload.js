@@ -2,7 +2,7 @@ const cloudinary = require('./_config');
 const fs = require('fs');
 const path = require('path');
 
-const imagePath = path.join(__dirname, '..', 'public', 'images', 'kanyehoodie.png');
+const imagePath = path.join(__dirname, '..', 'public', 'assets', 'kanyehoodie.png');
 
 if (!fs.existsSync(imagePath)) {
   console.error('Le fichier n\'existe pas à l\'emplacement spécifié:', imagePath);
