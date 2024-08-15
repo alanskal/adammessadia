@@ -36,7 +36,7 @@ randTimeOut()
         <AdultAd
         id={1}
         timeOut={randTimeOut()}
-        link='/Assets/ye.gif'
+        link='/assets/ye.gif'
         height={200}
         width={400}
 
