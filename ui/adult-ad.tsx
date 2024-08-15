@@ -12,6 +12,7 @@ interface AdultAdProps {
   link: string;
   height: number;
   width: number;
+  unoptimized?: boolean;
 }
 
 const AdultAd: React.FC<AdultAdProps> = ({ id, link, timeOut, height, width }) => {

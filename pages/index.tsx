@@ -39,6 +39,7 @@ randTimeOut()
         link='/Assets/ye.gif'
         height={200}
         width={400}
+        unoptimized={true}
 
         />
         <AdultAd
