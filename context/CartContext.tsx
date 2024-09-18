@@ -4,7 +4,7 @@ type CartItem = {
   priceId: string;
   quantity: number;
   name: string;
-  size: Array;
+  size: string[];
 };
 
 type CartContextType = {
