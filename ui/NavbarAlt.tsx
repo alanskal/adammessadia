@@ -74,13 +74,19 @@ export default function NavbarAlt() {
           <div className='bg-white position-absolute top-0 end-100 rounded'>
             <div className='p-2 cart'>
               <h1 className='text-center'>Panier</h1>
-              {cart.length > 0 ? (
-                cart.map((item, index) => (
-                  <p key={index}>Article ID: {item.priceId}, Quantité: {item.quantity}</p>
-                ))
-              ) : (
-                <p>Votre panier est vide</p>
-              )}
+
+                  {cart.length > 0 ? (
+                    cart.map((item, index) => (
+                      <div key={index} className='d-flex justify-content-between'>
+                          <p >{item.name}</p>
+                          <p>x</p>
+                          <p>{item.quantity}</p>
+                      </div>
+
+                      ))
+                  )    : (
+                      <p>Votre panier est vide</p>
+                  )}
               <div className='text-center'>
                 <button className='text-black' id='goToPay' onClick={proceedToCheckout}>Aller au paiement</button>
               </div>
@@ -105,7 +111,6 @@ export default function NavbarAlt() {
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item href="/cart">Cart</Dropdown.Item>
           <Dropdown.Item href="/about">About</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

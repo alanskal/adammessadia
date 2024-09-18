@@ -13,6 +13,7 @@ datasource db {
 model Cloth {
   name      String
   desc      String?
+  size      String[]
   price     Float
   priceId   String
   stock     Int

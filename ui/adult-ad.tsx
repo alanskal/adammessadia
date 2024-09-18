@@ -71,6 +71,7 @@ const AdultAd: React.FC<AdultAdProps> = ({ id, link, timeOut, height, width }) =
           className="ad-mobile"
           id="ad-mobile"
         />
+
       </div>
     </div>
   );

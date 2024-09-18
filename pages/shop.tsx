@@ -11,7 +11,8 @@ export async function getServerSideProps() {
     name: product.name,
     desc: product.desc,
     price: product.price,
-    image: product.imageUrl, // Assurez-vous que cette propriété existe et est correcte
+    image: product.imageUrl,
+    size: product.size,
   }));
 
   // Retourner les produits sérialisés en tant que props
@@ -23,7 +24,7 @@ export async function getServerSideProps() {
 }
 
 // Définir le type des props et passer les produits sérialisés à ProductList
-const ShowAllProducts = ({ products }: { products: { id: number; name: string; desc: string; price: number, image: string; }[] }) => (
+const ShowAllProducts = ({ products }: { products: { id: number; size: string[]; name: string; desc: string; price: number, image: string; }[] }) => (
   <div>
     <ShopPage products={products} />
   </div>

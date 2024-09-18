@@ -2,13 +2,20 @@ import Image from 'next/image';
 import { useCart } from '../context/CartContext';  // Assurez-vous que le chemin est correct
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { useState } from 'react';
 
-const ProductPage = ({ product }: { product: { id: number; name: string; desc: string; price: number, image: string, priceId: string; }}) => {
+const ProductPage = ({ product }: { product: { id: number; size: string[]; name: string; desc: string; price: number, image: string, priceId: string; }}) => {
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
-    addToCart({ priceId: product.priceId, quantity: 1 });
+    addToCart({ name: product.name, priceId: product.priceId, quantity: 1, size: product.size });
   };
+
+  const [selectedSize, setSelectedSize] = useState<string>("Taille")
+
+  const getSize = (size: string) => {
+    setSelectedSize(size)
+  }
 
   return (
     <div className='productPage'>
@@ -25,10 +32,10 @@ const ProductPage = ({ product }: { product: { id: number; name: string; desc: s
         <h2>{product.name}</h2>
         <h2>{product.price}</h2>
         <div className='mb-2 d-flex justify-center taille'>
-          <DropdownButton id="taille" title="Taille" >
-            <Dropdown.Item href="action-1">Ouais</Dropdown.Item>
-            <Dropdown.Item href="action-1">Ouais</Dropdown.Item>
-            <Dropdown.Item href="action-1">Ouais</Dropdown.Item>
+          <DropdownButton id="taille" title={selectedSize} >
+            {product.size.map ((size, index) => (
+              <Dropdown.Item onClick={() => getSize(size)} key={index}>{size}</Dropdown.Item>
+            ))}
           </DropdownButton>
         </div>
         <button id='addToCart' onClick={handleAddToCart}>Ajouter au panier</button>

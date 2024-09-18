@@ -3,6 +3,8 @@ import { createContext, useContext, useState, ReactNode } from 'react';
 type CartItem = {
   priceId: string;
   quantity: number;
+  name: string;
+  size: Array;
 };
 
 type CartContextType = {
@@ -38,6 +40,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       }
     });
   };
+
+
 
   return (
     <CartContext.Provider value={{ cart, addToCart }}>
